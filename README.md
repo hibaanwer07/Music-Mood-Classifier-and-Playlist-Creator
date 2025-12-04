@@ -86,11 +86,11 @@ Add more data → better accuracy → better vibes.
 
 # Results
 
-# High accuracy on multi-class mood detection
+ High accuracy on multi-class mood detection
 
-# Fast prediction (<1 sec per audio file)
+ Fast prediction (<1 sec per audio file)
 
-# Smooth playlist generation
+ Smooth playlist generation
 
 
 
