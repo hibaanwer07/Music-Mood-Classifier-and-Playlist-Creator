@@ -1,107 +1,107 @@
-# Music-Mood-Classifier-and-Playlist-Creator
-Music Mood Classifier & Playlist Creator
+# Music Mood Classifier & Playlist Creator
 
-An intelligent music companion that listens to the vibe, detects the mood, and builds the perfect playlist — all automatically.
+An intelligent system that listens to music like a vibe-detecting homie — classifies the mood of an audio track, then auto-creates a playlist that matches the emotion. Powered by deep learning, audio feature extraction, and a sprinkle of musical intuition.
 
-Overview
+# Overview
 
-The Music Mood Classifier & Playlist Creator is an AI-powered system that analyzes audio, predicts the mood of a song, and automatically generates playlists based on emotion categories. With real-time classification, smooth UI options, and smart playlist building, it brings together ML + music in one clean workflow.
+This project identifies the mood of a music file using audio features (MFCCs, chroma, tempo, etc.) and generates a playlist that resonates with that same energy. Whether it's chill, happy, sad, energetic, romantic, or lo-fi — the model gets the vibe and matches you with similar tracks.
 
-Features
+# Features
 
-🎧 Mood Classification using machine learning models (Happy, Sad, Energetic, Calm, etc.)
+ Mood Classification using deep learning
 
-🔍 Audio Feature Extraction (MFCCs, chroma, tempo, spectral features)
+ Automatic Playlist Generator
 
-🎶 Automatic Playlist Generation based on predicted mood
+ Extracts advanced audio features (MFCC, Spectral Contrast, Chroma)
 
-📂 Upload & Analyze any audio file
+ Works on MP3, WAV, and other common audio formats
 
-⚡ Fast Prediction with optimized preprocessing
+ Trained on labeled emotion-based datasets
 
-🧠 Customizable Model (SVM / Random Forest / Deep Learning)
+ Uses Librosa + TensorFlow/PyTorch pipeline
 
-📱 Clean & Responsive UI (if deployed with Flask/Streamlit)
+ Clean project structure for easy scaling
 
-🔄 Extendable Framework for adding new moods, features, or DSP modules
-
-Installation
-1️⃣ Clone the Repository
-git clone https://github.com/yourusername/music-mood-classifier.git
-cd music-mood-classifier
-2️⃣ Create Virtual Environment
-python -m venv venv
-source venv/Scripts/activate   # Windows
-# OR
-source venv/bin/activate       # Linux/Mac
-3️⃣ Install Dependencies
-pip install -r requirements.txt
-Usage
-Run the App
-python app.py
-
-Open:
-
-http://localhost:5000
+# Project Workflow
 
 Upload an audio file
 
-Get the predicted mood
+Model predicts the mood (Happy / Sad / Energetic / Calm / etc.)
 
-Auto-generate a playlist matching the mood
+System fetches recommendations from your dataset
 
-Configuration
+Generates a ready-to-play playlist
 
-Modify the following based on your setup:
+# Tech Stack
 
-Mood Labels
-MOOD_CLASSES = ["Happy", "Sad", "Energetic", "Calm"]
-Audio Settings
-SAMPLE_RATE = 22050
-FEATURE_TYPE = "mfcc"
-Playlist Settings
-PLAYLIST_SIZE = 10
-Model Training
+Python 3.10+
 
-Training notebooks available in notebooks/:
+Librosa (feature extraction)
 
-Data preprocessing
+TensorFlow / PyTorch (model training)
 
-Feature extraction
+NumPy, Pandas, Scikit-learn
 
-Model comparison (SVM, RF, CNN, LSTM)
+Matplotlib / Seaborn (visualization)
 
-Final model saving
 
-To train a new model:
+ # Installation & Setup
+   
+ # Install Dependencies
+pip install -r requirements.txt
 
-python train.py
-Contributing
+ # Run the App (if using Streamlit)
+streamlit run app.py
 
-Fork this repo
+# Training the Model
+Extract Features
+python src/feature_extraction.py
 
-Create a new branch:
+Train Mood Classifier
+python src/model_training.py
 
-git checkout -b feature/new-feature
+Predict Mood
+python src/predict_mood.py --file path/to/song.mp3
 
-Add your improvements
+# Playlist Creation
 
-Commit:
+After prediction:
 
-git commit -m "Add new feature"
+python src/playlist_generator.py --mood "Happy"
 
-Push and open a Pull Request
 
-License
+This automatically fetches songs labeled with the same mood and generates a JSON/CSV playlist.
 
-This project is licensed under the MIT License.
+# Dataset
 
-Acknowledgments
+You can use:
 
-Librosa – Audio processing
+GTZAN + mood-labeled variants
 
-Scikit-learn / TensorFlow – ML & DL models
+EMO-Music dataset
 
-Flask / Streamlit – Frontend UI
+Custom curated datasets
 
-Everyone contributing to open-source music-tech ❤️
+Add more data → better accuracy → better vibes.
+
+# Results
+
+# High accuracy on multi-class mood detection
+
+# Fast prediction (<1 sec per audio file)
+
+# Smooth playlist generation
+
+
+
+# License
+
+MIT License • Free to use, remix, vibe with.
+
+# Acknowledgments
+
+Librosa team for amazing audio tools
+
+TensorFlow/PyTorch communities
+
+Open-source music datasets
