@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  music-mood-app:
+    build: .
+    ports:
+      - "8502:8502"
+    volumes:
+      - .:/app
+    environment:
+      - SPOTIFY_CLIENT_ID=${SPOTIFY_CLIENT_ID}
+      - SPOTIFY_CLIENT_SECRET=${SPOTIFY_CLIENT_SECRET}
+      - SPOTIFY_REDIRECT_URI=http://localhost:8502/callback

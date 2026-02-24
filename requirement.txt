@@ -1,0 +1,14 @@
+Flask
+Werkzeug
+numpy
+librosa
+pydub
+spotipy
+python-dotenv
+scikit-learn
+tensorflow
+matplotlib
+seaborn
+pandas
+requests
+streamlit
